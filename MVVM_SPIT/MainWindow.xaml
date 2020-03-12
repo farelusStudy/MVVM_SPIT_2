@@ -5,10 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MVVM_SPIT"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="450" Width="840" MinWidth="840" 
         Background="Beige">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -16,17 +19,70 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
+
+
+        <!--_________________ROW 1_________________-->
+        <!--Выбор БД-->
+        <ListBox Grid.Row="1" Grid.Column="1"
+                 MinHeight="200" MinWidth="100"/>
+        <GridSplitter Grid.Row="1" Grid.Column="2" Width="2" 
+                      VerticalAlignment="Stretch" HorizontalAlignment="Center"/>
+        <!--Результат запроса-->
+        <ListBox Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="5"
+                 MinHeight="200" MinWidth="300"/>
+
+
+        <!--_________________ROW 2_________________-->
+        <GridSplitter Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="7" Height="2" 
+                      VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+
+
+        <!--_________________ROW 3_________________-->
+        <!--Поиск слова-->
+        <TextBox Grid.Row="3" Grid.Column="6"/>
+        <Button Grid.Row="3" Grid.Column="7" Content="Найти"
+                Height="auto" Width="100"/>
+
+        <!--_________________ROW 4_________________-->
+        <!--Добавление новой записи-->
+        <Label Grid.Row="4" Grid.Column="4" 
+               Content="Источник" 
+               HorizontalAlignment="Left"/>
+        <Label Grid.Row="4" Grid.Column="5" 
+               Content="Ссылка"
+               HorizontalAlignment="Left"/>
+        <Label Grid.Row="4" Grid.Column="6"
+               Content="Описание"
+               HorizontalAlignment="Left"/>
+
+        <!--_________________ROW 5_________________-->
+        <!--Добавление новой записи-->
+        <TextBox Grid.Row="5" Grid.Column="4"
+                 MinWidth="200"/>
+        <TextBox Grid.Row="5" Grid.Column="5"
+                 MinWidth="200"/>
+        <TextBox Grid.Row="5" Grid.Column="6"
+                 MinWidth="200"/>
+        <Button Grid.Row="5" Grid.Column="7" Content="Добавить"
+                Height="auto" Width="100"/>
+
+
+
+        <!--_________________ROW 6_________________-->
+        <!--_________________ROW 7_________________-->
+        <!--_________________ROW 8_________________-->
     </Grid>
 </Window>
